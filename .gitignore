@@ -1,7 +1,7 @@
-back-end/.idea/
-back-end/.vscode/
-back-end/node_modules/
-back-end/build/
-back-end/tmp/*
-!back-end/tmp/.gitkeep
-back-end/temp/
+api/.idea/
+api/.vscode/
+api/node_modules/
+api/build/
+api/tmp/*
+!api/tmp/.gitkeep
+api/temp/
