@@ -2,7 +2,7 @@
   "name": "countries-api",
   "version": "1.0.0",
   "main": "src/index.js",
-  "repository": "https://github.com/lucas54neves/countries-api.git",
+  "repository": "https://github.com/lucas54neves/gostack-11.git",
   "author": "Lucas Neves <lucas54neves@outlook.com>",
   "license": "MIT",
   "scripts": {
