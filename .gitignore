@@ -1,2 +1,4 @@
 node_modules
 .vscode
+api/yarn.lock
+api/yarn-error.log
