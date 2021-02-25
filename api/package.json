@@ -6,8 +6,10 @@
   "author": "Lucas Neves <lucas54neves@outlook.com>",
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
     "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
-    "build": "tsc"
+    "start": "ts-node src/index.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "devDependencies": {
     "@types/express": "^4.17.11",
