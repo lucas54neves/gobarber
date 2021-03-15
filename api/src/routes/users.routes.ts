@@ -1,6 +1,12 @@
 import { Router } from 'express'
 import CreateUserService from '../services/CreateUserService'
 
+type UserDTO = {
+  name: string
+  email: string
+  password?: string
+}
+
 const usersRouter = Router()
 
 usersRouter.post('/', async (request, response) => {
@@ -9,11 +15,13 @@ usersRouter.post('/', async (request, response) => {
 
     const createUser = new CreateUserService()
 
-    const user = await createUser.execute({
+    const user: UserDTO = await createUser.execute({
       name,
       email,
       password
     })
+
+    delete user.password
 
     return response.json(user)
   } catch (err) {
