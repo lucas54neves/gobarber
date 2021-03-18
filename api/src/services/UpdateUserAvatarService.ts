@@ -4,6 +4,7 @@ import fs from 'fs'
 
 import uploadConfig from '../config/upload'
 import User from '../models/Users'
+import AppError from '../errors/AppError'
 
 type Request = {
   userId: string
@@ -21,7 +22,7 @@ class UpdateUserAvatarService {
     })
 
     if (!user) {
-      throw new Error('Only authenticated user can change avatar.')
+      throw new AppError('Only authenticated user can change avatar.', 401)
     }
 
     if (user.avatar) {

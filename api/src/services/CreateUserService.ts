@@ -2,6 +2,7 @@ import { getRepository } from 'typeorm'
 import { hash } from 'bcryptjs'
 
 import User from '../models/Users'
+import AppError from '../errors/AppError'
 
 type Request = {
   name: string
@@ -18,7 +19,7 @@ class CreateUserService {
     })
 
     if (checkUserExists) {
-      throw new Error('Email address already used.')
+      throw new AppError('Email address already used.', 400)
     }
 
     const passwordHashed = await hash(password, 8)
