@@ -2,9 +2,9 @@ import { getRepository } from 'typeorm'
 import path from 'path'
 import fs from 'fs'
 
-import uploadConfig from '../config/upload'
-import User from '../models/Users'
-import AppError from '../errors/AppError'
+import uploadConfig from '../../../config/upload'
+import User from '../entities/Users'
+import AppError from '../../../shared/errors/AppError'
 
 type Request = {
   userId: string

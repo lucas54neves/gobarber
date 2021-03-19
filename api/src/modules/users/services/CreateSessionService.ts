@@ -2,9 +2,9 @@ import { compare } from 'bcryptjs'
 import { getRepository } from 'typeorm'
 import { sign } from 'jsonwebtoken'
 
-import authConfig from '../config/auth'
-import User from '../models/Users'
-import AppError from '../errors/AppError'
+import authConfig from '../../../config/auth'
+import User from '../entities/Users'
+import AppError from '../../../shared/errors/AppError'
 
 type Request = {
   email: string
