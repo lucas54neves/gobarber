@@ -3,7 +3,7 @@ import path from 'path'
 import fs from 'fs'
 
 import uploadConfig from '../../../config/upload'
-import User from '../entities/Users'
+import User from '../infra/typeorm/entities/Users'
 import AppError from '../../../shared/errors/AppError'
 
 type Request = {

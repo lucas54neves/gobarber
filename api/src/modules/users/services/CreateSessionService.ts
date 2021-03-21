@@ -3,7 +3,7 @@ import { getRepository } from 'typeorm'
 import { sign } from 'jsonwebtoken'
 
 import authConfig from '../../../config/auth'
-import User from '../entities/Users'
+import User from '../infra/typeorm/entities/Users'
 import AppError from '../../../shared/errors/AppError'
 
 type Request = {
