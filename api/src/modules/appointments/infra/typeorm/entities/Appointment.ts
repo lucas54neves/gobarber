@@ -16,7 +16,7 @@ class Appointment {
   id: string
 
   @Column()
-  provider_id: string
+  providerId: string
 
   @ManyToOne(() => User)
   @JoinColumn({ name: 'provider_id' })
@@ -26,10 +26,10 @@ class Appointment {
   date: Date
 
   @CreateDateColumn()
-  created_at: Date
+  createdAt: Date
 
   @UpdateDateColumn()
-  updated_at: Date
+  updatedAt: Date
 }
 
 export default Appointment
